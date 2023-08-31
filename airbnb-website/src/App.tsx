@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import room from './assets/room.jpg'
 import './App.css'
 
 function App() {
@@ -13,9 +14,17 @@ function App() {
       </ul>
     </div>
 
-    <div className='min-h-screen flex items-center justify-center bg-coast bg-no-repeat bg-cover'>
+
+    <div className='min-h-screen flex items-center justify-center bg-coast bg-no-repeat bg-cover bg-fixed'>
       <h1 className='text-3xl text-gray-50'>Welcome to Sunshine Coast</h1>
     </div>
+
+    <div className=' bg-gray-900 h-[100vh] text-gray-50 grid items-center justify-center'>
+      <div className='grid md:grid-cols-2 grid-rows-2 w-[75vw] h-[60vh]'>       
+        <h2>About Us</h2>
+        <img src={room} alt="..." />
+        </div>
+      </div>
     </>
   
 }
