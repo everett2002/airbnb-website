@@ -1,10 +1,13 @@
 import { useState } from 'react'
 import room from './assets/room.jpg'
+import whirlpool from './assets/whirlpool.jpg'
+import forestwaterfall from './assets/forest-waterfall.jpg'
+import golf from './assets/golf.jpg'
 import './App.css'
 
 function App() {
   return  <>
-    <div className='fixed bg-gray-900 min-w-full h-10 top-0 text-gray-50 flex items-center justify-between px-2'>
+    <div className='fixed bg-gray-800 min-w-full h-10 top-0 text-gray-50 flex items-center justify-between px-2'>
       <h2>Harmony Airbnb</h2>
       <ul className='flex space-x-2'>
         <li>About</li>
@@ -25,7 +28,15 @@ function App() {
         <img src={room} alt="..." />
         </div>
       </div>
-    </>
+
+    <div className='flex overflow-hidden'>
+      <img className='w-[50vw] h-[75vh]' src={whirlpool} alt="" />
+      <img className='w-[50vw] h-[75vh]' src={forestwaterfall} alt="" />
+      <img className='w-[50vw] h-[75vh]' src={golf} alt="" />
+    </div>
+  </>
+
+
   
 }
 
