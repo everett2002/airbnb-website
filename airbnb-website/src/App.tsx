@@ -119,15 +119,21 @@ function App() {
       <div className='w-full h-full bg-coast'></div>
     </div>
 
-    <div>
-      <form action="" className='flex flex-col'>
-        <label htmlFor="email">Email:</label>
-        <input id='email' type="text" className='p-2 h-[2rem] rounded-xl border-1 border-gray-900 w-[20vw]' />
-        <label htmlFor="name">Name:</label>
-        <input id='name' type="text" className='p-2 h-[2rem] rounded-xl w-[20vw]' />
-        <label htmlFor="msg">Message:</label>
-        <input id='msg' type="text" className='p-2 h-[2rem] rounded-xl w-[20vw]' />
-        <input type="submit" />
+    <div className='p-10 h-screen grid justify-center items-center bg-blue-900 rounded-3xl' style={{display:"inline-block"}}>
+      <form onSubmit={() => {}} className='flex flex-col space-y-5'>
+          <div>
+          <label htmlFor="email">Email</label>
+          <input id='email' type="text" className='p-2 h-[2rem] rounded-md border-1 border-gray-900 w-[20vw]' required />
+          </div>
+          <>
+          <label htmlFor="name">Name:</label>
+          <input id='name' type="text" className='p-2 h-[2rem] rounded-md w-[20vw]' required/>
+          </>
+          <>
+          <label htmlFor="msg">Message:</label>
+          <input id='msg' type="text" className='p-2 rounded-md w-[32vw] h-[15vw]' required />
+          </>
+          <input type="submit" className='bg-' />
       </form>
     </div>
   </>
