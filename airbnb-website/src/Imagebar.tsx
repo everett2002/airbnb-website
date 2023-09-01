@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import './index.css'; // Import your CSS file
 import whirlpool from './assets/whirlpool.jpg'
 import forestwaterfall from './assets/forest-waterfall.jpg'
@@ -19,7 +19,7 @@ const ImageBar = () => {
   }, []);
 
   return (
-    <div className='overflow-hidden bg-gray-900'>
+    <div className='overflow-hidden'>
     <div className="flex scroll-smooth space-x-5" style={{ transform: `translateX(-${640-(scrollPosition*0.25)}px)` }}>
       <img src={whirlpool} className='w-[50vh] md:w-[35vw]' alt="Image 1" />
       <img src={golf} className='w-[50vh] md:w-[35vw]' alt="Image 2" />

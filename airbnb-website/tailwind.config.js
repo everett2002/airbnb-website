@@ -8,6 +8,10 @@ module.exports = {
       backgroundImage: {
         'coast' : 'url("./src/assets/main.jpg")',
         'room' : 'url("./src/assets/room.jpg")'
+      },
+      fontFamily: {
+        'handlee': ["'Handlee', cursive"],
+        'sacramento': ["'Sacramento', cursive"]
       }
     },
   },
