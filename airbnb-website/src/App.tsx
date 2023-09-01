@@ -50,6 +50,9 @@ function App() {
           <a  href="#things-to-do">Things To Do</a>
         </li>
         <li className='hover:text-gray-500'>Contact</li>
+        <li>
+          <span className='border-2 border-gray-50 p-1 hover:text-gray-500 hover:border-gray-500'>Book Now</span>
+        </li>
       </ul>
     </nav>
 
@@ -58,15 +61,10 @@ function App() {
       <h1 className='text-4xl text-gray-50'>Welcome to Sunshine Coast</h1>
     </div>
 
-
-
-   
-
-
     <div id='about-us' className=' bg-gray-900 text-gray-50 grid items-center justify-center h-screen'>
       <div className='grid grid-cols-2 items-center justify-center m-[10vw] gap-10'>   
       <div className=''>
-        <h2 className='mb-5 text-3xl'>Greetings from Lily & Paul</h2>
+        <h2 className='mb-5 text-3xl font-handlee'>Greetings from Lily & Paul</h2>
         <p className='text-16'>We enjoy traveling around the world but fell in love with Sunshine Coast at the first sight and don't want to leave. So we think, what can be a better way to share this love than run a B&B here to help people better enjoy this place while making the coast even more enjoyable. Harmany Stays was designed to make your visit a unique, comfortable and fun experience. Our rooms are spacious and thoughtfully set up to make you feel convenient and at-home</p> 
       </div>   
       <div className=''>        
@@ -113,8 +111,24 @@ function App() {
 
     <Imagebar/>
 
-    <div className='min-w-screen h-screen  flex justify-center items-center'>
-      <h2 id='things-to-do' className='text-3xl'>Things To Do</h2>
+    <div className='min-w-screen h-screen grid justify-center items-center m-32 bg-gray-500 grid-cols-2 rounded-3xl overflow-hidden'>
+      <div className='p-10 space-y-5'>
+        <h3 className='text-2xl'>Smuggler's Cove</h3>
+        <p className='text-xl'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus repudiandae facilis consequatur vel animi dolore ipsa quod maiores quidem distinctio sequi, quas odit ipsam nihil nobis? Voluptates adipisci libero autem incidunt minus. Quis iure porro, dignissimos consequuntur molestias commodi, ipsam non ipsum ad tenetur inventore fuga enim ratione atque libero.</p>
+      </div>
+      <div className='w-full h-full bg-coast'></div>
+    </div>
+
+    <div>
+      <form action="" className='flex flex-col'>
+        <label htmlFor="email">Email:</label>
+        <input id='email' type="text" className='p-2 h-[2rem] rounded-xl border-1 border-gray-900 w-[20vw]' />
+        <label htmlFor="name">Name:</label>
+        <input id='name' type="text" className='p-2 h-[2rem] rounded-xl w-[20vw]' />
+        <label htmlFor="msg">Message:</label>
+        <input id='msg' type="text" className='p-2 h-[2rem] rounded-xl w-[20vw]' />
+        <input type="submit" />
+      </form>
     </div>
   </>
 
