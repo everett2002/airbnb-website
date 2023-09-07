@@ -37,23 +37,26 @@ function App() {
     <nav className='fixed bg-primary-dark min-w-full top-0 text-primary-light flex items-center justify-between p-3 px-5 z-10 scroll-smooth duration-300'
     style={{ transform: `translateY(${showNav ? 0 : -100}%)` }}>
       <h2 className='text-3xl'>Harmony Airbnb</h2>
-      <ul className='flex space-x-8 '>
-        <li className='hover:text-primary-text'>
+      <ul className='flex space-x-8 items-center'>
+        <li className='hover:text-primary-medium'>
           <a  href="#home">HOME</a> 
         </li>
-        <li className='hover:text-primary-text'>
+        <li className='hover:text-primary-medium'>
           <a  href="#about-us">ABOUT</a> 
         </li>
-        <li className='hover:text-primary-text'>
+        <li className='hover:text-primary-medium'>
           <a  href="#attractions">ATTRACTIONS</a>
         </li>
-        <li className='hover:text-primary-text'>
+        <li className='hover:text-primary-medium'>
           <a  href="#things-to-do">THINGS TO DO</a>
         </li>
-        <li className='hover:text-primary-text'>CONTACT</li>
-        <li>
-          <span className='border-2 border-gray-50 p-1 hover:text-primary-text hover:border-primary-text'>BOOK NOW</span>
+        <li className='hover:text-primary-medium p-1 border-gray-50 border-2'>
+          <a href="#contact">CONTACT</a> 
         </li>
+        {/* To be Implemented */}
+        {/* <li>
+          <span className='border-2 border-gray-50 p-1 hover:text-primary-medium hover:border-primary-text'>BOOK NOW</span>
+        </li> */}
       </ul>
     </nav>
 
@@ -112,52 +115,43 @@ function App() {
 
     <Imagebar/>
 
-    {/* <div className='text-primary-dark min-w-screen h-screen grid justify-center items-center m-32 bg-primary-medium rounded-3xl overflow-hidden'>
-      <div className='p-10 h-[100%] flex items-center'>
-        <div className='space-y-5'>
-        <h3 className='text-2xl'>Smuggler's Cove</h3>
-        <p className='text-xl'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus repudiandae facilis consequatur vel animi dolore ipsa quod maiores quidem distinctio sequi, quas odit ipsam nihil nobis? Voluptates adipisci libero autem incidunt minus. Quis iure porro, dignissimos consequuntur molestias commodi, ipsam non ipsum ad tenetur inventore fuga enim ratione atque libero.</p>
-        </div>
-      </div>
 
-
-      <div className='w-full h-full bg-coast'></div>
-
-    </div> */}
 
 
     <div id='things-to-do'>
-      <ImageSlider/>
+      <div>
+        <ImageSlider/>
+      </div>
     </div>
     
 
-    <div className='grid justify-center items-center bg-blue-900 h-[100vh]'>
+    <div id='contact' className='grid justify-center items-center bg-blue-900 h-[100vh]'>
       <div className='space-y-7'>
-      <h2 className='text-3xl text-center'>Contact Us</h2>
+        <h2 className='text-3xl text-center'>Contact Us</h2>
 
-      <form onSubmit={() => {}} className='flex flex-col space-y-5 w-[60vw]'>
-        <div className='grid gap-8 grid-cols-1 md:grid-cols-2 '>
-          <div className='space-y-4'>
-            <div className='flex flex-col'>
-            <label htmlFor="email">Email</label>
-            <input id='email' type="text" className='border p-2 focus:outline-none' required />
-            </div >
-            <div className='flex flex-col'>
-            <label htmlFor="name">Name</label>
-            <input id='name' type="text" className='border p-2 focus:outline-none' required/>
+        <form className='flex flex-col space-y-5 w-[60vw]'>
+          <div className='grid gap-8 grid-cols-1 md:grid-cols-2 '>
+            <div className='space-y-4'>
+              <div className='flex flex-col'>
+              <label htmlFor="email">Email</label>
+              <input id='email' type="text" className='border p-2 focus:outline-none' required />
+              </div >
+              <div className='flex flex-col'>
+              <label htmlFor="name">Name</label>
+              <input id='name' type="text" className='border p-2 focus:outline-none' required/>
+              </div>
+              <div className='flex flex-col'>
+              <label htmlFor="subject">Subject</label>
+              <input id='subject' type="text" className='border p-2 focus:outline-none' required/>
+              </div>
+              </div>
+              <div className='flex flex-col md:h-[100%] h-[25vh]'>
+              <label htmlFor="msg">Message</label>
+              <textarea id='msg' className='border h-[100%] flex text-start focus:outline-none p-2' required  placeholder='Your Message...'/>
+              </div>
             </div>
-            <div className='flex flex-col'>
-            <label htmlFor="subject">Subject</label>
-            <input id='subject' type="text" className='border p-2 focus:outline-none' required/>
-            </div>
-            </div>
-            <div className='flex flex-col md:h-[100%] h-[25vh]'>
-            <label htmlFor="msg">Message</label>
-            <textarea id='msg' className='border h-[100%] flex text-start focus:outline-none p-2' required  placeholder='Your Message...'/>
-            </div>
-          </div>
-          <input type="submit" className='bg-primary-medium border-none p-2 w-auto' />
-      </form>
+            <input type="submit" className='bg-primary-medium border-none p-2 w-auto cursor-pointer' />
+        </form>
     </div>
     </div>
   </> 
